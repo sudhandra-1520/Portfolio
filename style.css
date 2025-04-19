@@ -1,0 +1,180 @@
+/* Global styles */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1950&q=80') no-repeat center center fixed;
+  background-size: cover;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: #f0f0f0;
+  overflow-x: hidden;
+}
+
+nav {
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+}
+
+nav li {
+  margin: 0 15px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #f0f0f0;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #00e5ff;
+}
+
+h1, h2 {
+  text-align: center;
+  color: #00e5ff;
+  margin-bottom: 20px;
+}
+
+.section {
+  padding: 60px 20px;
+  max-width: 1000px;
+  margin: auto;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  margin-bottom: 30px;
+  text-align: center;
+  color: #f0f0f0;
+}
+
+.skill {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(5px);
+  color: #fff;
+  text-align: center;
+  min-width: 120px;
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease;
+}
+
+/* Hover effect for skills */
+.skill:hover {
+  transform: translateY(-5px);
+  background-color: rgba(0, 229, 255, 0.2);
+}
+
+.skill-bar {
+  height: 8px;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.skill-bar::before {
+  content: "";
+  display: block;
+  height: 100%;
+  width: 0;
+  background-color: #00e5ff;
+  animation: fillSkillBar 2s ease-in-out forwards;
+}
+
+@keyframes fillSkillBar {
+  to {
+    width: 100%;
+  }
+}
+
+/* Project cards */
+.project-card {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s;
+  color: #f0f0f0;
+}
+
+.project-card:hover {
+  transform: scale(1.03);
+}
+
+input, textarea, button {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-family: inherit;
+}
+
+input, textarea {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+button {
+  background-color: #00e5ff;
+  color: black;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #00bcd4;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.5);
+  margin-top: 40px;
+  border-radius: 10px;
+  font-size: 14px;
+  color: #f0f0f0;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .home-content h2 {
+    font-size: 24px;
+  }
+
+  h1, h2 {
+    font-size: 28px;
+  }
+
+  .section {
+    padding: 30px 10px;
+  }
+
+  .skills-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
